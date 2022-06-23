@@ -1,16 +1,15 @@
 def primary():
-     inputFN = input("Enter the file name: " )
+     #inputFN = input("Enter the file name: " )
 
-     with open(r"text.txt", 'r') as fp:
+     with open(r"C:\Users\patri\Documents\3rd Year\4th Sem\CPE106L\LR\LR1\P2\CPE106L_E01_4Q2122\LR1\text.txt", 'r') as fp:
           num_lines = sum(1 for line in fp)
           print('Total lines:', num_lines) # 8
     
 
-     if inputNum!=0:
-          f = open("text.txt")
-          quotes = f.readlines()
-          f.close()
-          print(quotes[inputNum-1])
+     if num_lines!=0:
+          print("Enter Value: ")
+          quotes=input()
+          print(quotes[num_lines])
      else:
           print("You have exited the program :)")
 
@@ -18,4 +17,3 @@ def primary():
 if __name__== "__main__":
   primary()
 
-  #hkjajafjaffaf
