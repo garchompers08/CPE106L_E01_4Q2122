@@ -6,33 +6,39 @@ def primary():
           
                for count, line in enumerate(fp):
                 pass
-          num_lines = count+1
+          num_lines = int(count+1)
           print('Total lines:', num_lines) # 8
-     
-          EnterVal = int(input("Enter Value to select a line: "))
+          
+          EnterVal = int(input("Enter Value to select a line number: "))
 
-          if EnterVal!=0:
-               f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes1.txt","r")
-               quotes = f.readlines()
-               print(quotes[EnterVal-1])
-               f.close()
+          if EnterVal!=0 and EnterVal > num_lines:
+               print("The inputted line number must be between 1 and ", num_lines)
+          elif EnterVal!=0 and EnterVal<= num_lines:
+                    f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes1.txt","r")
+                    quotes = f.readlines()
+                    print(quotes[EnterVal-1])
+                    f.close()
           else:
                print("You have exited the program :)")
+
+          
 
      elif inputFN == "quotes2":
           with open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes2.txt", 'r') as fp:
                for count, line in enumerate(fp):
                     pass
-          num_lines = count+1
+          num_lines = int(count+1)
           print('Total lines:', num_lines) # 8
      
-          EnterVal = int(input("Enter Value to select a line: "))
+          EnterVal = int(input("Enter Value to select a line number: "))
 
-          if EnterVal!=0:
-               f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes2.txt","r")
-               quotes = f.readlines()
-               print(quotes[EnterVal-1])
-               f.close()
+          if EnterVal!=0 and EnterVal > num_lines:
+               print("The inputted line number must be between 1 and ", num_lines)
+          elif EnterVal!=0 and EnterVal<= num_lines:
+                    f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes2.txt","r")
+                    quotes = f.readlines()
+                    print(quotes[EnterVal-1])
+                    f.close()
           else:
                print("You have exited the program :)")
 
@@ -40,16 +46,18 @@ def primary():
           with open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes3.txt", 'r') as fp:
                for count, line in enumerate(fp):
                     pass
-          num_lines = count+1
+          num_lines = int(count+1)
           print('Total lines:', num_lines) # 8
           
-          EnterVal = int(input("Enter Value to select a line: "))
+          EnterVal = int(input("Enter Value to select a line number: "))
 
-          if EnterVal!=0:
-               f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes3.txt","r")
-               quotes = f.readlines()
-               print(quotes[EnterVal-1])
-               f.close()
+          if EnterVal!=0 and EnterVal > num_lines:
+               print("The inputted line number must be between 1 and ", num_lines)
+          elif EnterVal!=0 and EnterVal<= num_lines:
+                    f = open(r"G:\MAPUA\2nd Year\4th Term\CPE106L\Module 1\LR1 PP\CPE106L_E01_4Q2122\LR1\quotes3.txt","r")
+                    quotes = f.readlines()
+                    print(quotes[EnterVal-1])
+                    f.close()
           else:
                print("You have exited the program :)")
      
