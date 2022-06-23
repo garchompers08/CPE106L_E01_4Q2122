@@ -1,11 +1,9 @@
-
 def primary():
      inputFN = input("Enter the file name: " )
 
-    with open(r"E:\demos\files\read_demo.txt", 'r') as fp:
-    for count, line in enumerate(fp):
-        pass
-    print('Total Lines', count + 1)
+     with open(r"text.txt", 'r') as fp:
+          num_lines = sum(1 for line in fp)
+          print('Total lines:', num_lines) # 8
     
 
      if inputNum!=0:
