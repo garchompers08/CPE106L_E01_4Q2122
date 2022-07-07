@@ -1,23 +1,48 @@
-
 def primary():
-     inputFN = input("Enter the file name: " )
+     inputFN = input("Enter the file name [include .txt]: " )
+     line_assign = int(input("Enter the number of lines you wish to put in the .txt file: "))
+     lines = []
 
-    with open(r"E:\demos\files\read_demo.txt", 'r') as fp:
-    for count, line in enumerate(fp):
-        pass
-    print('Total Lines', count + 1)
-    
+     if(line_assign != 0):
+          f = open(inputFN, "w+")
+          
 
-     if inputNum!=0:
-          f = open("text.txt")
-          quotes = f.readlines()
+          for i in range(line_assign):
+               arr = input()
+               lines.append(arr)
+
+          for i in range(line_assign):
+               f.write(lines[i])
+               f.write("\n")
+          
+          f = open(inputFN, "r")
+          readline = f.readlines()
+
+          print("\n\nThe inputted lines are: \n")
+
+          for y in range(line_assign):
+               print(readline[y])
+          
           f.close()
-          print(quotes[inputNum-1])
+
+          print("Please pick a line number from the list of lines shown above: ")
+          EnterVal = int(input())
+          
+          if EnterVal!=0 and EnterVal > line_assign:
+               print("The inputted line number must be between 1 and ", line_assign)
+               
+          elif EnterVal!=0 and EnterVal<= line_assign:
+                    f = open(inputFN,"r")
+                    quotes = f.readlines()
+                    print("Line","[",EnterVal, "]:",quotes[EnterVal-1])
+                    f.close()
+          else:
+                    print("You have exited the program :)")
      else:
           print("You have exited the program :)")
-
-
+     
+          
+    
 if __name__== "__main__":
   primary()
 
-  #test
